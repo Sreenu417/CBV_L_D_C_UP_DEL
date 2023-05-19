@@ -1,0 +1,37 @@
+{% extends 'app/dummy.html' %}
+
+{% block title %}
+<title>Detail Page</title>
+{% endblock %}
+
+
+
+{% block body_block %}
+
+   <h1 class="A">Details Of The {{sclobject.name}} School</h1>
+
+        <div style="background-color: darkorange;">
+
+                <div style="color: chartreuse;">
+                        <h1>Name Of The School is {{sclobject.name}}</h1>
+                        <h1> Principal Of The School Is Mr\Ms  {{sclobject.principal}}</h1>
+                        <h1> Location Of The School Is  {{sclobject.location}}</h1>
+                </div>
+        </div>
+
+
+
+
+
+<div style="background-color: aquamarine;">
+        {% for i in sclobject.students.all %}
+            <h4> Name Of The Student Is {{i.student_name}}</h4>
+            <h4> Age Of The Student Is  {{i.student_age}}</h4>
+        
+        {% endfor %}
+  
+</div>
+
+
+
+{% endblock %}
