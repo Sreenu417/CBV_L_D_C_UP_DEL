@@ -21,5 +21,17 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('home/',home.as_view(),name='home'),
     path('SchoolList/',SchoolList.as_view(),name='SchoolList'),
-    re_path('(?P<pk>\d+)/',SchoolDetail.as_view(),name='SchoolDetail'),
+    
+    path('SchoolCreate/',SchoolCreate.as_view(),name='SchoolCreate'),
+
+
+
+
+
+
+    re_path('(?P<pk>\d+)/',SchoolDetail.as_view(),name='SchoolDetail'),    #(?P<pk>\d+)-----> it is validate the only number type i.e integers Characters are not validate
+                                                                           
+
+
+    # re_path('(?P<pk>\w+)/',SchoolDetail.as_view(),name='SchoolDetail'),  #(?P<pk>\w+)-----> This regular Expression pattern validates the both integers and as well as characters                                                              
 ]

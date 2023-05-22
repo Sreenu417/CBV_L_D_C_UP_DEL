@@ -1,3 +1,13 @@
+
+
+
+
+<!--This template is used for Displaying The List of objects Data           It is under ListView-->
+
+
+
+
+
 {% extends 'app/dummy.html' %}
 
 {% block title %}
@@ -7,11 +17,12 @@
 
 {% block body_block %}
 
+<h1 style="background-color: cornsilk;">
     {% for school in schools %}
             <a href="{{school.pk}}"><h1>{{school.name}}</h1></a>
     {% endfor %}
 
-
+</h1>
 
 
 {% endblock %}
