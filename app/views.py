@@ -35,12 +35,13 @@ class SchoolCreate(CreateView):
     fields='__all__'
 
 
+# This class based view is used for Updating the Data          It is under UpdateView
 
 class SchoolUpdate(UpdateView):
     model=School
     fields='__all__'
 
-
+# This class based view is used for Deletingting the Data          It is under DeleteView
 
 class SchoolDelete(DeleteView):
     model=School
