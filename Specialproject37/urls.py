@@ -26,12 +26,21 @@ urlpatterns = [
 
 
 
+    re_path('^update/(?P<pk>\d+)/',SchoolUpdate.as_view(),name='SchoolUpdate'),
+
+    re_path('^delete/(?P<pk>\d+)/',SchoolDelete.as_view(),name='SchoolDelete'),
+
+
+
+
+
+
+
 
 
 
     re_path('(?P<pk>\d+)/',SchoolDetail.as_view(),name='SchoolDetail'),    #(?P<pk>\d+)-----> it is validate the only number type i.e integers Characters are not validate
-                                                                           
-
+                                                                        
 
     # re_path('(?P<pk>\w+)/',SchoolDetail.as_view(),name='SchoolDetail'),  #(?P<pk>\w+)-----> This regular Expression pattern validates the both integers and as well as characters                                                              
 ]

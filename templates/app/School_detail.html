@@ -19,6 +19,8 @@
 
    <h1 class="A">Details Of The {{sclobject.name}} School</h1>
 
+   
+
         <div style="background-color: darkorange;">
 
                 <div style="color: chartreuse;">
@@ -40,6 +42,12 @@
         {% endfor %}
   
 </div>
+
+
+<h4><a href="{% url 'SchoolUpdate' pk=sclobject.pk %}" class="btn btn-success" >Upadte-Data</a></h4>
+
+<h4><a href="{% url 'SchoolDelete' pk=sclobject.pk %}" class="btn btn-danger" >Delete-Data</a></h4>
+
 
 
 
